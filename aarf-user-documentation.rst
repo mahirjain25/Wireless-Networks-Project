@@ -17,3 +17,10 @@ If there are two consecutive failures, the threshold is reset to 10 and the send
 
 Design
 ==================
+
+The function AarfWifiManager::DoReportDataFailed (WifiRemoteStation \*st) implements what happens when a data packet is not successfully transmitted. If the packet not transmitted is the first packet at a new data rate, the station will be in recovery mode and take necessary action. If the packet is the second or any higher packet dropped, normal fallback is performed. 
+
+The function AarfWifiManager::DoReportDataOk (WifiRemoteStation \*st, double ackSnr, WifiMode ackMode, double dataSnr) logs that the data was successfully transmitted along with the SNR values for the data and acknowledgement packets. For every packet successfully transmitted, it updates the values of the number of successful transmissions and other values. If the number of successful packets has reached the threshold, it will switch to the next higher data rate and go into recovery mode. 
+
+The function AarfWifiManager::DoGetDataTxVector(WifiRemoteStation \*st) and AarfWifiManager::DoGetRtsTxVector (WifiRemoteStation \*st) are used to define the parameters which will be passed to the 802.11 PHY to be used for transmission. The parameters like mode, channel width, power level among others are returned as a vector. 
+ 
