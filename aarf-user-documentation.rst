@@ -35,7 +35,7 @@ The variables mentioned below are defined in the ``AarfWifiRemoteStation`` struc
 * ``m_successThreshold``: It is the number of consecutive successful transmissions required to send a probe packet at a higher rate. 
 * ``m_rate``: 
 
-The variables mentioned below are attributes of the AarfWifiManager class. The one-line description given below for each of these variables is available in the source code itself. 
+The variables mentioned below are attributes of the ``AarfWifiManager`` class. The one-line description given below for each of these variables is available in the source code itself. 
 
 * ``SuccessK``: Multiplication factor used to calculate the success threshold; the default value is 2. 
 * ``TimerK``: Multiplication factor for the timer threshold; the default value is 2. 
@@ -48,6 +48,6 @@ Here are a few important functions in the ns3 implementation of AARF:
 
 * The function ``DoReportDataFailed`` implements what happens when a data packet is not successfully transmitted. If the packet not transmitted is the first packet at a new data rate, the station will be in recovery mode and take necessary action. If the packet is the second or any higher packet dropped, the normal fallback is performed. 
 
-* The function ``'DoReportDataOk`` logs that the data was successfully transmitted along with the SNR values for the data and acknowledgement packets. For every packet successfully transmitted, it updates the values of the number of successful transmissions and other values. If the number of successful packets has reached the threshold, it will switch to the next higher data rate and go into recovery mode. 
+* The function ``DoReportDataOk`` logs that the data was successfully transmitted along with the SNR values for the data and acknowledgement packets. For every packet successfully transmitted, it updates the values of the number of successful transmissions and other values. If the number of successful packets has reached the threshold, it will switch to the next higher data rate and go into recovery mode. 
 
 * The function ``DoGetDataTxVector`` and ``DoGetRtsTxVector`` are used to define the parameters which will be passed to the 802.11 PHY to be used for transmission. The parameters like mode, channel width, power level among others are returned as a vector. 
