@@ -33,7 +33,7 @@ The variables mentioned below are defined in the ``AarfWifiRemoteStation`` struc
 * ``m_recovery``: It is set to TRUE when a probing packet is sent to try a higher data rate. At all other times, it is FALSE. 
 *  ``m_timerTimeout``: If a timer reaches this value, a probe packet is sent. 
 * ``m_successThreshold``: It is the number of consecutive successful transmissions required to send a probe packet at a higher rate. 
-* ``m_rate``: 
+* ``m_rate``: It is the rate at which data is being transmitted currently. 
 
 The variables mentioned below are attributes of the ``AarfWifiManager`` class. The one-line description given below for each of these variables is available in the source code itself. 
 
