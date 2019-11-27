@@ -106,8 +106,8 @@ Low Power Mode
 ~~~~~~~~~~~~~~
 
 It is the dual of the High Performance Mode.
-The dualities are as follows:
 
+The dualities are as follows:
     * Notions of *rate* are replaced by *pow*
     * Increment operators are replaced by decrement operators.
     * Notions of *min* replaced by *max*
@@ -123,6 +123,16 @@ data rate.
 
 Implementation Details
 ======================
+
+The APARF algorithm implementation is found in the **wifi** module in ns3.
+
+The file for reference is: *ns-3-dev/src/wifi/model/aparf-wifi-manager.cc*
+
+The class description is given below.
+
+**Note:** This algorithm does not support HE, HT and VHT modes of operation.
+
+
 
 
 
