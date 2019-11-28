@@ -132,6 +132,34 @@ The class description is given below.
 
 **Note:** This algorithm does not support HE, HT and VHT modes of operation.
 
+The private attributes of the **AparfWifiManager** class are:
+
+  * `m_failMax`: The minimum number of failed transmissions to try a new
+    power or rate.
+  * `m_maxPower`: Maximal power level.
+  * `m_minPower`: Minimal power level.
+  * `m_powerChange`: The trace source fired when the transmission power changes.
+  * `m_powerDec`: Step size for decrementing the power.
+  * `m_powerInc`: Step size for increment the power.
+  * `m_powerMax`: The maximum number of power changes.
+  * `m_rateChange`: The trace source fired when the transmission rate changes.
+  * `m_rateDec`: Step size for decrement the rate.
+  * `m_rateInc`: Step size for increment the rate.
+  * `m_succesMax1`: The minimum number of successful transmissions in "High"
+    state to try a new power or rate.
+  * `m_succesMax2`: The minimum number of successful transmissions in "Low" state
+    to try a new power or rate.
+
+Additionally, the class maintains an enum for the state (enum ns3:\:AparfWifiManager\::State)
+
+The important member functions are as follows:
+
+  * `CheckInit(AparfWifiRemoteStation * station	)`: Checks for initialisations. Has a parameter
+  * ``:
+  * ``:
+  * ``:
+  * ``:
+  * ``:
 
 
 
