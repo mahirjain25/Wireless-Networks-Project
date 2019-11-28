@@ -133,20 +133,20 @@ The class description is given below.
 **Note:** This algorithm does not support HE, HT and VHT modes of operation.
 
 The private attributes of the *AparfWifiManager* class are:
-  * `m_failMax`: The minimum number of failed transmissions to try a new
+  * ``m_failMax``: The minimum number of failed transmissions to try a new
     power or rate.
-  * `m_maxPower`: Maximal power level.
-  * `m_minPower`: Minimal power level.
-  * `m_powerChange`: The trace source fired when the transmission power changes.
-  * `m_powerDec`: Step size for decrementing the power.
-  * `m_powerInc`: Step size for increment the power.
-  * `m_powerMax`: The maximum number of power changes.
-  * `m_rateChange`: The trace source fired when the transmission rate changes.
-  * `m_rateDec`: Step size for decrement the rate.
-  * `m_rateInc`: Step size for increment the rate.
-  * `m_succesMax1`: The minimum number of successful transmissions in "High"
+  * ``m_maxPower``: Maximal power level.
+  * ``m_minPower``: Minimal power level.
+  * ``m_powerChange``: The trace source fired when the transmission power changes.
+  * ``m_powerDec``: Step size for decrementing the power.
+  * ``m_powerInc``: Step size for increment the power.
+  * ``m_powerMax``: The maximum number of power changes.
+  * ``m_rateChange``: The trace source fired when the transmission rate changes.
+  * ``m_rateDec``: Step size for decrement the rate.
+  * ``m_rateInc``: Step size for increment the rate.
+  * ``m_succesMax1``: The minimum number of successful transmissions in "High"
     state to try a new power or rate.
-  * `m_succesMax2`: The minimum number of successful transmissions in "Low" state
+  * ``m_succesMax2``: The minimum number of successful transmissions in "Low" state
     to try a new power or rate.
 
 Additionally, the class maintains an enum for the state (enum ns3:\:
@@ -154,17 +154,17 @@ AparfWifiManager\::State) - High, Low and Spread
 
 
 The important member functions are as follows:
-  * `CheckInit(AparfWifiRemoteStation * station	)`: Checks for initialisations.
+  * ``CheckInit(AparfWifiRemoteStation * station)``: Checks for initialisations.
     Has a parameter station referring to the remote station.
-  * `DoCreateStation()`: Returns the created station data structure instance.
-  * `DoGetDataTxVector(WifiRemoteStation * station)`: Returns TXVECTOR used to
+  * ``DoCreateStation()``: Returns the created station data structure instance.
+  * ``DoGetDataTxVector(WifiRemoteStation * station)``: Returns TXVECTOR used to
     send a packet to the station. Parameter station refers to the destination
     station.
-  * `DoInitialize()`: Initialisation. Reports error in case of HT,VHT or HE mode
+  * ``DoInitialize()``: Initialisation. Reports error in case of HT,VHT or HE mode
     request.
-  * `DoReportDataFailed(WifiRemoteStation * station)`: Handles a data failure.
+  * ``DoReportDataFailed(WifiRemoteStation * station)``: Handles a data failure.
     The parameter is the station we failed to send data to.
-  * `DoReportDataOk(WifiRemoteStation * station,double ackSnr,WifiMode ackMode,double dataSnr)`:
+  * ``DoReportDataOk(WifiRemoteStation * station,double ackSnr,WifiMode ackMode,double dataSnr)``:
     Handles a data success. Station refers to the destination station. ackSnr and dataSnr
     refer to SNR of the ACK and data received respectively. ackMode is the WifiMode
     used by receiver to send ACK. 
